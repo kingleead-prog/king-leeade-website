@@ -1,1 +1,424 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KING LEEADE | Gospel Guitarist</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 8, 8, 0.95);
+      border-bottom: 1px solid #222;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      background:
+        radial-gradient(circle at center, #222 0%, #080808 60%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 10vw, 90px);
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #bbbbbb;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #d4af37;
+      color: #080808;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #ffffff;
+    }
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aaa;
+    }
+
+    .about {
+      background: #101010;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .photo-box {
+      min-height: 350px;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .about-text p {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #292929;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .contact {
+      background: #101010;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #bbb;
+      margin: 10px 0;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid #222;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 12px;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">KING <span>LEEADE</span></div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#gear">Gear</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>KING <span>LEEADE</span></h1>
+
+    <h2>Professional Gospel Guitarist</h2>
+
+    <p>
+      Lead & Rhythm Guitarist | Gospel Music | Live Performance |
+      Guitar Production
+    </p>
+
+    <a href="#contact" class="btn">BOOK KING LEEADE</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Music. Worship. Expression.</p>
+    </div>
+
+    <div class="about-content">
+
+      <div class="photo-box">
+        <p>
+          YOUR PHOTO WILL GO HERE<br><br>
+          We will replace this area with your professional picture.
+        </p>
+      </div>
+
+      <div class="about-text">
+        <p>
+          I am KING LEEADE, a professional guitarist specializing
+          in gospel music, lead guitar and rhythm guitar.
+        </p>
+
+        <p>
+          My passion is using the guitar to create powerful musical
+          expressions that support worship, live performances and
+          gospel productions.
+        </p>
+
+        <p>
+          From live church performances to studio sessions,
+          I bring creativity, musicality and passion to every
+          performance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="gear">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>My Gear</h2>
+      <p>The tools behind the sound.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Epiphone Les Paul</h3>
+        <p>
+          My guitar for powerful lead and rhythm tones.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Guitar Effects</h3>
+        <p>
+          Effects processors and tones designed for gospel
+          performance.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>FL Studio</h3>
+        <p>
+          Music production, recording and creative arrangement.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Behringer UMC22</h3>
+        <p>
+          Audio interface for recording and production.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Live Performance</h3>
+        <p>
+          Lead and rhythm guitar for worship and gospel events.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Studio Work</h3>
+        <p>
+          Guitar recording and musical production.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="services" class="about">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Services</h2>
+      <p>Available for gospel music projects and performances.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Live Performance</h3>
+        <p>
+          Gospel concerts, church programs and special events.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Studio Guitar</h3>
+        <p>
+          Lead and rhythm guitar recording for music projects.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Guitar Sessions</h3>
+        <p>
+          Guitar collaboration and musical production sessions.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Let's Work Together</h2>
+      <p>Book KING LEEADE for your next gospel music project.</p>
+    </div>
+
+    <p>📧 Email: YourEmail@example.com</p>
+    <p>📱 Phone/WhatsApp: Your Number</p>
+
+    <a href="mailto:YourEmail@example.com" class="btn">
+      CONTACT ME
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 KING LEEEADE. All Rights Reserved.</p>
+  <p>Professional Gospel Guitarist</p>
+</footer>
+
+</body>
+</html>
