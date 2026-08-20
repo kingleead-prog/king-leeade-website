@@ -1,1184 +1,224 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KING LEEADE | Gospel Guitarist</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#050914" name="theme-color"/>
+<title>KING LEEADE | Professional Gospel Guitarist</title>
 <style>
-
-:root{
-    --black:#02050d;
-    --dark:#050b19;
-    --gold:#f5b91f;
-    --gold-light:#ffd95c;
-    --white:#ffffff;
-    --gray:#b9c0ce;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:var(--black);
-    color:white;
-    font-family:Montserrat,Arial,sans-serif;
-    overflow-x:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:82px;
-    z-index:9999;
-
-    display:flex;
-    align-items:center;
-    padding:10px 4%;
-
-    background:rgba(2,5,13,.82);
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.logo{
-    width:210px;
-}
-
-.logo img{
-    width:100%;
-    height:58px;
-    object-fit:contain;
-    object-position:left center;
-}
-
-nav{
-    margin-left:auto;
-    display:flex;
-    gap:28px;
-}
-
-nav a{
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.5px;
-    padding:30px 0;
-    position:relative;
-}
-
-nav a:hover{
-    color:var(--gold);
-}
-
-nav a:first-child{
-    color:var(--gold);
-}
-
-nav a:first-child:after{
-    content:"";
-    position:absolute;
-    bottom:18px;
-    left:0;
-    right:0;
-    height:2px;
-    background:var(--gold);
-}
-
-.socials{
-    display:flex;
-    gap:10px;
-    margin-left:30px;
-}
-
-.socials a{
-    width:30px;
-    height:30px;
-    border:1px solid white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    font-weight:bold;
-}
-
-/* MOBILE MENU */
-
-.menu{
-    display:none;
-    margin-left:auto;
-    width:55px;
-    height:55px;
-    border-radius:15px;
-    border:1px solid #414b5f;
-    background:#071020;
-    padding:13px;
-}
-
-.menu span{
-    display:block;
-    height:3px;
-    background:white;
-    margin:6px 0;
-    border-radius:5px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:850px;
-    height:100vh;
-    position:relative;
-    overflow:hidden;
-
-    display:flex;
-    align-items:center;
-
-    padding:100px 5% 60px;
-}
-
-.hero-image{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-
-    background:
-    linear-gradient(
-        90deg,
-        rgba(1,4,14,.98) 0%,
-        rgba(1,4,14,.90) 35%,
-        rgba(1,4,14,.40) 65%,
-        rgba(1,4,14,.45) 100%
-    );
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:610px;
-}
-
-.eyebrow{
-    color:var(--gold);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:3px;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(70px,9vw,135px);
-    line-height:.82;
-    letter-spacing:-6px;
-    font-weight:900;
-}
-
-.hero h1 .white{
-    display:block;
-    color:white;
-}
-
-.hero h1 .gold{
-    display:block;
-    color:var(--gold);
-}
-
-.gold-line{
-    width:150px;
-    height:3px;
-    background:var(--gold);
-    margin:25px 0;
-}
-
-.hero-text{
-    max-width:440px;
-    font-size:16px;
-    line-height:1.6;
-    color:#e2e6ee;
-}
-
-.buttons{
-    display:flex;
-    gap:16px;
-    margin-top:30px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    min-height:50px;
-    padding:0 25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:.5px;
-}
-
-.gold-btn{
-    background:linear-gradient(120deg,#ffd65b,#eda900);
-    color:#05070c;
-}
-
-.outline-btn{
-    border:1px solid var(--gold);
-    color:white;
-}
-
-.hero-sign{
-    position:absolute;
-    right:7%;
-    bottom:60px;
-    z-index:2;
-
-    font-family:"Playfair Display",serif;
-    font-size:45px;
-    font-style:italic;
-    color:var(--gold);
-    transform:rotate(-7deg);
-    text-align:center;
-}
-
-.hero-sign small{
-    display:block;
-    font-family:Montserrat;
-    font-size:9px;
-    font-style:normal;
-    letter-spacing:2px;
-    color:white;
-}
-
-/* ================= GENERAL ================= */
-
-section{
-    padding:90px 4%;
-    max-width:1250px;
-    margin:auto;
-}
-
-.section-title{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-    margin-bottom:35px;
-}
-
-.section-title span{
-    height:1px;
-    width:80px;
-    background:rgba(245,185,31,.4);
-}
-
-.section-title h2{
-    font-size:22px;
-    letter-spacing:2px;
-}
-
-.section-title em{
-    color:var(--gold);
-    font-style:normal;
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1.15fr;
-    gap:45px;
-    align-items:center;
-}
-
-.about-photo{
-    border:2px solid rgba(245,185,31,.5);
-    padding:4px;
-}
-
-.about-photo img{
-    width:100%;
-    height:390px;
-    object-fit:cover;
-}
-
-.kicker{
-    color:var(--gold);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:3px;
-}
-
-.about h2{
-    font-size:35px;
-    margin:12px 0 20px;
-}
-
-.about h2 span{
-    color:var(--gold);
-}
-
-.about p{
-    color:var(--gray);
-    line-height:1.7;
-    font-size:14px;
-}
-
-.about-icons{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-top:30px;
-}
-
-.about-icons div{
-    font-size:10px;
-    font-weight:800;
-}
-
-.about-icons b{
-    display:block;
-    color:var(--gold);
-    font-size:27px;
-    margin-bottom:8px;
-}
-
-/* ================= GALLERY ================= */
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:8px;
-}
-
-.gallery-grid img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border:1px solid rgba(245,185,31,.3);
-    transition:.3s;
-}
-
-.gallery-grid img:hover{
-    transform:translateY(-6px);
-    filter:brightness(1.2);
-}
-
-/* ================= SERVICES ================= */
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    border:1px solid rgba(245,185,31,.25);
-}
-
-.service{
-    padding:25px 18px;
-    border-right:1px solid rgba(245,185,31,.2);
-}
-
-.service:last-child{
-    border-right:none;
-}
-
-.service-icon{
-    font-size:30px;
-    color:var(--gold);
-}
-
-.service h3{
-    font-size:11px;
-    margin:12px 0 8px;
-}
-
-.service p{
-    color:var(--gray);
-    font-size:10px;
-    line-height:1.6;
-}
-
-/* ================= MUSIC ================= */
-
-.music-box{
-    border:1px solid rgba(245,185,31,.35);
-    background:#071020;
-
-    padding:35px;
-
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-.play{
-    width:60px;
-    height:60px;
-    flex-shrink:0;
-
-    border:2px solid var(--gold);
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--gold);
-}
-
-.music-box h3{
-    font-size:20px;
-}
-
-.music-box p{
-    color:var(--gray);
-    font-size:13px;
-    margin-top:7px;
-}
-
-.music-box .btn{
-    margin-left:auto;
-}
-
-/* ================= STATS ================= */
-
-.stats{
-    max-width:none;
-    background:#010309;
-
-    display:grid;
-    grid-template-columns:1.5fr repeat(4,.7fr) 1.4fr;
-
-    align-items:center;
-    gap:20px;
-
-    border-top:1px solid rgba(255,255,255,.06);
-    border-bottom:1px solid rgba(255,255,255,.06);
-
-    padding:45px 5%;
-}
-
-.signature{
-    color:var(--gold);
-    font-family:"Playfair Display",serif;
-    font-size:28px;
-    font-style:italic;
-}
-
-.signature small{
-    display:block;
-    color:white;
-    font-family:Montserrat;
-    font-size:7px;
-    letter-spacing:2px;
-}
-
-.stat{
-    border-left:1px solid #333;
-    padding-left:15px;
-}
-
-.stat strong{
-    display:block;
-    font-size:27px;
-}
-
-.stat span{
-    color:#bbb;
-    font-size:8px;
-    font-weight:800;
-}
-
-.gear{
-    font-size:11px;
-}
-
-.gear small{
-    display:block;
-    color:var(--gold);
-    margin-bottom:8px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    text-align:center;
-}
-
-.contact h2{
-    font-size:50px;
-    margin:15px 0;
-}
-
-.contact h2 span{
-    color:var(--gold);
-}
-
-.contact-text{
-    max-width:600px;
-    margin:0 auto 25px;
-    color:var(--gray);
-    line-height:1.7;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    padding:35px;
-    text-align:center;
-    background:#010309;
-    border-top:1px solid rgba(255,255,255,.08);
-}
-
-footer img{
-    width:190px;
-    height:55px;
-    object-fit:contain;
-    margin:auto;
-}
-
-footer p{
-    color:#777;
-    font-size:10px;
-    margin-top:12px;
-}
-
-/* ================= TABLET ================= */
-
-@media(max-width:900px){
-
-    header{
-        height:72px;
-        padding:8px 18px;
-    }
-
-    .logo{
-        width:160px;
-    }
-
-    nav{
-        display:none;
-
-        position:absolute;
-        top:72px;
-        left:0;
-        right:0;
-
-        flex-direction:column;
-        gap:0;
-
-        background:#030814;
-        border-bottom:1px solid #293143;
-    }
-
-    nav.show{
-        display:flex;
-    }
-
-    nav a{
-        padding:17px;
-        text-align:center;
-        width:100%;
-    }
-
-    .socials{
-        display:none;
-    }
-
-    .menu{
-        display:block;
-    }
-
-    .hero{
-        min-height:850px;
-        height:auto;
-        align-items:flex-end;
-        padding:120px 22px 70px;
-    }
-
-    .hero-overlay{
-        background:
-        linear-gradient(
-            180deg,
-            rgba(2,5,14,.20),
-            rgba(2,5,14,.45) 35%,
-            rgba(2,5,14,.98) 78%,
-            #02050d
-        );
-    }
-
-    .hero-image{
-        object-position:65% center;
-    }
-
-    .hero-sign{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:70px;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .gallery-grid img{
-        height:200px;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .service{
-        border-bottom:1px solid rgba(245,185,31,.2);
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .signature,
-    .gear{
-        grid-column:1/-1;
-    }
-
-}
-
-/* ================= PHONE ================= */
-
-@media(max-width:500px){
-
-    .logo{
-        width:145px;
-    }
-
-    .hero{
-        min-height:800px;
-    }
-
-    .eyebrow{
-        font-size:9px;
-        letter-spacing:2px;
-    }
-
-    .hero h1{
-        font-size:56px;
-        letter-spacing:-4px;
-    }
-
-    .hero-text{
-        font-size:14px;
-    }
-
-    .buttons{
-        display:grid;
-        width:100%;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    section{
-        padding:65px 18px;
-    }
-
-    .about h2{
-        font-size:27px;
-    }
-
-    .about-icons{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
-
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-grid img{
-        height:260px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .service{
-        border-right:none;
-    }
-
-    .music-box{
-        flex-wrap:wrap;
-    }
-
-    .music-box .btn{
-        margin-left:0;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .stat{
-        border-left:none;
-        border-top:1px solid #222;
-        padding:15px 0 0;
-    }
-
-    .contact h2{
-        font-size:38px;
-    }
-
-}
+:root{--bg:#050914;--panel:#0b1424;--gold:#f2b52f;--gold2:#ffd86b;--white:#f8f9fb;--muted:#aab4c2;--line:#ffffff1c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;position:relative;isolation:isolate;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 80% 20%,rgba(242,181,47,.10),transparent 32%),radial-gradient(circle at 15% 80%,rgba(44,98,180,.10),transparent 34%);pointer-events:none}body:after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,7,17,.96) 0%,rgba(3,7,17,.88) 38%,rgba(3,7,17,.68) 68%,rgba(3,7,17,.80) 100%),linear-gradient(180deg,rgba(3,7,17,.70),rgba(3,7,17,.90));pointer-events:none}
+a{text-decoration:none;color:inherit}.wrap{width:min(94%,1380px);margin:auto}
+header{position:fixed;inset:0 0 auto;z-index:50;background:#030711e8;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+nav{height:76px;display:flex;align-items:center;gap:24px;justify-content:flex-end}.logo{width:210px;height:auto;display:block}.nav{margin-left:auto;display:flex;gap:28px;align-items:center}.nav a{font-size:12px;font-weight:800;color:#e9edf2}.nav a:hover{color:var(--gold)}.social{display:flex;gap:8px}.social a{width:31px;height:31px;border-radius:8px;display:grid;place-items:center;background:#ffffff12;border:1px solid #ffffff16;font-weight:900}.menu{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--line);background:#0b1424;color:#fff;border-radius:12px;font-size:22px}
+.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,9,20,.64),rgba(5,9,20,.30))}
+ .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 35%,rgba(242,181,47,.14),transparent 30%),linear-gradient(90deg,#030711f5 0%,#050914df 45%,#050914b8 100%);pointer-events:none}
+.hero-content{position:relative;z-index:3;padding:135px 0 70px}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.24em;color:var(--gold)}
+h1{font-size:clamp(60px,8.8vw,126px);line-height:.78;letter-spacing:-.065em;margin:17px 0 24px}h1 span{color:var(--gold)}
+.hero h2{font-size:clamp(20px,2.5vw,33px);margin:0 0 15px}.hero p{max-width:600px;color:#c0c8d2;line-height:1.75;font-size:15px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{min-height:50px;padding:0 23px;border-radius:999px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:12px}.primary{background:linear-gradient(180deg,var(--gold2),#e6a21e);color:#07101d;border-color:#ffd86b}.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);max-width:750px;margin-top:35px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.badge{text-align:center;padding:14px 4px;border-right:1px solid var(--line)}.badge:last-child{border-right:0}.badge b{display:block;color:var(--gold);font-size:20px}.badge strong{display:block;font-size:10px;margin-top:6px}.badge small{display:block;color:#8d98a7;font-size:9px;margin-top:3px}
+.section{padding:92px 0;background:rgba(5,9,20,.28)}.head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:34px}.kicker{font-size:11px;color:var(--gold);font-weight:900;letter-spacing:.22em}.head h2{font-size:clamp(38px,5vw,68px);line-height:.9;letter-spacing:-.055em;margin:9px 0 0}.head p{max-width:500px;color:var(--muted);line-height:1.7}
+.about{display:grid;grid-template-columns:320px 1fr 330px;gap:18px}.box{background:#ffffff06;border:1px solid var(--line);border-radius:18px;overflow:hidden}.portrait{border:2px solid var(--gold)}.portrait img{display:block;width:100%;height:100%;min-height:430px;object-fit:cover;object-position:center}.copy{padding:28px}.copy h3,.services h3{margin:0 0 14px;font-size:26px}.copy p{color:#aeb7c3;line-height:1.75;font-size:14px}.quote{color:var(--gold)!important;font-style:italic}.signature{color:var(--gold);font-family:cursive;font-size:32px}.services{padding:22px}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.service{padding:18px 6px;text-align:center;background:#081321;border:1px solid #ffffff14;border-radius:12px}.service b{display:block;font-size:23px;color:var(--gold)}.service strong{display:block;font-size:10px;line-height:1.35;margin-top:7px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery .g{position:relative;overflow:hidden;border-radius:14px;border:1px solid #ffffff16;background:#081321}.gallery img{display:block;width:100%;height:320px;object-fit:cover;transition:.35s}.gallery .g:hover img{transform:scale(1.04)}.gallery .label{position:absolute;left:10px;bottom:10px;background:#030711cc;border:1px solid #ffffff1c;border-radius:999px;padding:7px 10px;font-size:9px;font-weight:900}
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.price{padding:25px 18px;background:linear-gradient(180deg,#0b1627,#07101d);border:1px solid var(--line);border-radius:16px}.price b{font-size:12px;color:#dbe1e9}.price strong{display:block;font-size:32px;color:var(--gold);margin-top:10px}.price span{display:block;color:#8793a2;font-size:10px;margin-top:7px}
+.gear{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gear-card{padding:22px;text-align:center;border:1px solid var(--line);border-radius:14px;background:#081321}.gear-card b{font-size:25px;color:var(--gold)}.gear-card strong{display:block;margin-top:9px;font-size:11px}
+.contact{padding:72px 0;background:linear-gradient(110deg,#0b1526,#07101d);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center}.contact h2{font-size:clamp(42px,5vw,70px);line-height:.9;letter-spacing:-.05em;margin:10px 0 15px}.contact p{color:#aeb7c2}.contacts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.contact-card{padding:18px;border:1px solid var(--line);border-radius:13px;background:#ffffff06}.contact-card small{display:block;color:#7f8b9a;font-size:9px;text-transform:uppercase;letter-spacing:.13em}.contact-card strong{display:block;margin-top:7px;color:#fff;font-size:13px}.contact-card:hover{border-color:var(--gold)}
+footer{background:rgba(3,7,17,.72);padding:32px 0 45px;color:#7f8a99;font-size:10px}footer .wrap{display:flex;justify-content:space-between;gap:20px}.footer-brand{color:#dbe1e9;letter-spacing:.25em}
+@media(max-width:980px){.nav,.social{display:none}.menu{display:block}.nav.open{display:flex;position:absolute;top:76px;left:3%;right:3%;flex-direction:column;align-items:stretch;gap:0;padding:8px;background:#07101ff5;border:1px solid var(--line);border-radius:16px}.nav.open a{padding:14px}.hero-person{width:68%;opacity:.75}.about{grid-template-columns:1fr 1fr}.about .services{grid-column:1/-1}.gallery{grid-template-columns:repeat(3,1fr)}.pricing{grid-template-columns:1fr 1fr}.gear{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:600px){nav{height:74px}.logo{width:205px;height:68px}.nav.open{top:68px}.hero{align-items:end}.hero:before{background:linear-gradient(180deg,#050914dd,#0509149c 38%,#050914f7 76%)}.hero-content{padding:260px 0 48px}.hero h1{font-size:clamp(58px,18vw,88px)}.hero p{font-size:13px}.buttons{display:grid;grid-template-columns:1fr}.btn{width:100%}.badges{grid-template-columns:1fr 1fr}.badge:nth-child(2){border-right:0}.badge:nth-child(3),.badge:nth-child(4){border-top:1px solid var(--line)}.section{padding:72px 0}.head{display:block}.head p{margin-top:15px}.about{grid-template-columns:1fr}.about .services{grid-column:auto}.portrait img{min-height:390px}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:250px}.pricing{grid-template-columns:1fr 1fr}.gear{grid-template-columns:1fr 1fr}.contacts{grid-template-columns:1fr}.contact h2{font-size:44px}footer .wrap{display:block;text-align:center}.footer-brand{margin-bottom:12px}}
+
+/* FINAL POLISH */
+.logo{width:250px;height:72px;object-fit:contain;object-position:left center;filter:none}
+header{background:rgba(3,7,17,.94)}
+.social a svg,.contact-icon svg{width:20px;height:20px;display:block}
+.social a{color:#fff}
+.social a.tiktok{color:#fff}.social a.instagram{color:#ff4fb3}.social a.whatsapp{color:#25d366}
+.hero{background:#030711;min-height:100svh}
+.hero:before{background:linear-gradient(90deg,rgba(3,7,17,.96) 0%,rgba(3,7,17,.82) 35%,rgba(3,7,17,.38) 62%,rgba(3,7,17,.78) 100%),url('assets/img1.jpg') center right/cover no-repeat;opacity:1}
+.hero:after{content:"KL";position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(220px,35vw,520px);font-weight:900;letter-spacing:-.12em;color:rgba(242,181,47,.055);pointer-events:none}
+.hero-content{z-index:3}.hero-content>.wrap{position:relative;z-index:3;max-width:1380px}
+.hero h1{max-width:620px}.hero p{max-width:570px}
+.hero .badges{display:none}
+.about{grid-template-columns:320px 1fr;max-width:1100px}.about .services{display:none}
+.portrait{border:2px solid var(--gold);box-shadow:0 0 0 1px rgba(242,181,47,.12),0 18px 50px rgba(0,0,0,.35)}
+.gallery{grid-template-columns:repeat(3,1fr)}
+.gallery .g{border:2px solid var(--gold);background:#050914;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.gallery img{height:360px;object-fit:cover}
+.gallery .label{position:static;background:linear-gradient(180deg,#07101d,#030711);border:0;border-top:1px solid rgba(242,181,47,.35);border-radius:0;padding:14px 12px;font-size:11px;color:#fff;letter-spacing:.08em;text-transform:uppercase}
+.gallery .g:hover img{transform:scale(1.03)}
+.contact-card{display:flex;align-items:center;gap:12px}.contact-card small{margin:0}.contact-icon{width:38px;height:38px;display:grid;place-items:center;flex:0 0 38px;border:1px solid rgba(242,181,47,.45);border-radius:10px;color:var(--gold)}
+.contact-copy{min-width:0}.contact-copy strong{margin-top:3px}
+.social a{display:grid;place-items:center}
+@media(max-width:980px){.logo{width:200px}.gallery{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr 1fr}.hero:before{background:linear-gradient(90deg,rgba(3,7,17,.94),rgba(3,7,17,.66)),url('assets/img1.jpg') center/cover no-repeat}}
+@media(max-width:600px){.logo{width:180px;height:52px}.hero:before{background:linear-gradient(180deg,rgba(3,7,17,.72),rgba(3,7,17,.74) 35%,rgba(3,7,17,.96) 80%),url('assets/img1.jpg') center/cover no-repeat}.hero-content{padding-top:170px}.about{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.gallery img{height:340px}.hero:after{font-size:180px}}
+
+.gallery .g, .gallery figure, .photo-card, .picture-card {
+  border: 2px solid #f2b52f !important;
+  box-shadow: 0 0 0 1px #f2b52f55, 0 8px 30px #0008;
+}
+.gallery img, .photo-card img, .picture-card img {
+  border: 0 !important;
+}
+
+/* LEFT-SIDE HERO LETTERING */
+.hero-content > .wrap{display:flex;justify-content:flex-start;width:min(94%,1380px)}
+.hero-content > .wrap > div{width:min(58%,760px);text-align:left}
+.hero-content .hero-copy{margin-left:0;margin-right:auto}
+.hero-content .hero-copy p{margin-left:0;margin-right:auto}
+.hero-content .buttons{justify-content:flex-start}
+.hero-content .badges{margin-left:0;margin-right:auto}
+.quick-contact{display:flex;justify-content:flex-start;gap:10px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:980px){.hero-content > .wrap > div{width:min(72%,700px)}}
+@media(max-width:600px){.hero-content > .wrap{justify-content:flex-start}.hero-content > .wrap > div{width:92%;text-align:left}.hero-content .buttons{justify-content:flex-start}.hero-content .badges{margin-left:0}.quick-contact{justify-content:flex-start}}
+
+/* USER REQUESTED FINAL ADJUSTMENTS */
+.hero-content > .wrap{display:flex;justify-content:flex-end;width:min(94%,1380px)}
+.hero-content > .wrap > div{width:min(58%,760px);text-align:right}
+.hero-content .hero-copy{margin-left:auto}
+.hero-content .hero-copy p{margin-left:auto}
+.hero-content .buttons{justify-content:flex-end}
+.hero-content .badges{margin-left:auto}
+.quick-contact{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:14px}
+.quick-contact a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(242,181,47,.5);border-radius:999px;padding:9px 14px;font-size:11px;font-weight:800;background:#07101dcc}
+.quick-contact a:hover{border-color:var(--gold);color:var(--gold)}
+.gmail{color:#fff}
+@media(max-width:980px){.hero-content > .wrap > div{width:min(72%,700px)}}
+@media(max-width:600px){.hero-content > .wrap{justify-content:flex-end}.hero-content > .wrap > div{width:92%;text-align:right}.hero-content .buttons{justify-content:flex-end}.hero-content .badges{margin-left:auto}.quick-contact{justify-content:flex-end}.quick-contact a{font-size:10px;padding:8px 11px}}
+
+.site-logo{position:absolute;left:24px;top:10px;z-index:100;display:flex;align-items:center}
+.site-logo img{display:block;width:260px;height:72px;max-height:72px;object-fit:contain;object-position:left center}
+@media(max-width:700px){.site-logo{left:12px;top:7px}.site-logo img{width:190px;height:58px;max-height:58px}}
+
+
+/* KING LEEADE HERO FACE FIX */
+.hero-person{position:absolute;z-index:2;top:0;right:0;width:min(58vw,900px);height:100%;background-image:linear-gradient(90deg,rgba(3,7,17,1) 0%,rgba(3,7,17,.72) 24%,rgba(3,7,17,.18) 58%,rgba(3,7,17,.08) 100%),url("assets/img4.jpg");background-repeat:no-repeat;background-position:center right;background-size:cover;filter:none;pointer-events:none;}
+@media(max-width:980px){.hero-person{width:78%;height:72%;top:74px;right:-8%;opacity:.78;background-position:center top;background-size:cover;mask-image:linear-gradient(to bottom,black 65%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 65%,transparent 100%);}}
+@media(max-width:600px){.hero-person{width:105%;height:62%;top:74px;right:-18%;opacity:.68;background-position:center top;background-size:cover;mask-image:linear-gradient(to bottom,black 55%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 55%,transparent 100%);}.hero-content{padding-top:300px;}}
+
+
+/* NEW SIMPLE KING LEEADE LOGO */
+.site-logo{display:flex;align-items:center;flex:0 0 auto}
+.site-logo .logo{width:250px;height:72px;display:block;object-fit:contain;object-position:left center}
+@media(max-width:980px){.site-logo .logo{width:200px;height:64px}}
+@media(max-width:600px){.site-logo .logo{width:170px;height:58px}}
+
+/* FINAL SERVICES & PRICING POLISH */
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 18px}
+.service-card{display:flex;gap:14px;align-items:flex-start;padding:22px;border:1px solid rgba(212,168,75,.28);border-radius:18px;background:rgba(255,255,255,.025);transition:transform .25s ease,border-color .25s ease}
+.service-card:hover{transform:translateY(-4px);border-color:rgba(212,168,75,.7)}
+.service-card>span{font-size:30px;line-height:1}
+.service-card strong{display:block;color:#d9ad4f;font-size:15px;letter-spacing:.04em;margin-bottom:7px}
+.service-card p{margin:0;color:rgba(255,255,255,.7);font-size:13px;line-height:1.55}
+#pricing{scroll-margin-top:90px}
+@media(max-width:900px){.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.service-grid{grid-template-columns:1fr}.service-card{padding:18px}.service-card>span{font-size:26px}}
 
 </style>
+
+<style id="final-left-lettering-fix">
+/* FINAL POSITION FIX: hero lettering is deliberately on the LEFT */
+.hero-content{width:100%;}
+.hero-content > .wrap{width:min(94%,1380px);margin-left:3%;margin-right:auto;}
+.hero-content .hero-copy{width:min(650px,62vw);margin-left:0 !important;margin-right:auto !important;text-align:left !important;}
+.hero-content .hero-copy p{margin-left:0 !important;margin-right:auto !important;text-align:left !important;}
+@media(max-width:600px){
+  .hero-content{padding-top:230px !important;padding-bottom:48px !important;}
+  .hero-content > .wrap{width:94%;margin-left:3%;margin-right:3%;}
+  .hero-content .hero-copy{width:100%;max-width:100%;margin-left:0 !important;margin-right:0 !important;text-align:left !important;}
+  .hero-content .hero-copy p{max-width:100%;text-align:left !important;}
+}
+</style>
+
+<style id="face-visibility-final">
+/* FINAL FACE VISIBILITY: keep the original design but make the portrait clearly visible */
+.hero-person{
+  z-index:2 !important;
+  width:min(62vw,960px) !important;
+  right:-1% !important;
+  opacity:1 !important;
+  background-position:center center !important;
+  background-size:cover !important;
+  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.35) 10%,black 28%,black 100%) !important;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.35) 10%,black 28%,black 100%) !important;
+}
+.hero:after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,rgba(3,7,17,.30) 0%,rgba(3,7,17,.05) 42%,rgba(3,7,17,.10) 100%);
+}
+.hero-content{z-index:4 !important;}
+@media(max-width:980px){
+ .hero-person{width:88% !important;height:78% !important;top:74px !important;right:-6% !important;opacity:1 !important;background-position:center top !important;mask-image:linear-gradient(to bottom,black 70%,transparent 100%) !important;-webkit-mask-image:linear-gradient(to bottom,black 70%,transparent 100%) !important;}
+}
+@media(max-width:600px){
+ .hero-person{width:115% !important;height:68% !important;top:72px !important;right:-20% !important;opacity:1 !important;background-position:center top !important;mask-image:linear-gradient(to bottom,black 62%,transparent 100%) !important;-webkit-mask-image:linear-gradient(to bottom,black 62%,transparent 100%) !important;}
+ .hero:after{background:linear-gradient(180deg,rgba(3,7,17,.05) 0%,rgba(3,7,17,.05) 48%,rgba(3,7,17,.55) 82%,rgba(3,7,17,.92) 100%);}
+}
+</style>
 </head>
-
 <body>
+<header><div class="site-logo"><img class="logo" src="assets/img5.png" alt="KING LEEADE Gospel Guitarist logo"></div><div class="wrap"><nav>
 
-<!-- ================= HEADER ================= -->
-
-<header>
-
-    <a href="#home" class="logo">
-        <img src="images/logo.png" alt="KING LEEADE">
-    </a>
-
-    <button class="menu" id="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <nav id="nav">
-
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#music">MUSIC</a>
-        <a href="#gallery">GALLERY</a>
-        <a href="#services">SERVICES</a>
-        <a href="#gear">GEAR</a>
-        <a href="#contact">CONTACT</a>
-
-    </nav>
-
-    <div class="socials">
-        <a href="#">f</a>
-        <a href="#">◎</a>
-        <a href="#">▶</a>
-    </div>
-
+<button aria-label="Open menu" class="menu" id="menu">☰</button>
+<div class="nav" id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#gear">Gear</a><a href="#contact">Contact</a></div>
+<div class="social"><a aria-label="TikTok" class="tiktok" href="https://www.tiktok.com/@kingleead" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.7 3c.4 2.2 1.6 3.7 3.8 4v3.1c-1.5.1-2.8-.4-4-1.2v6.5c0 4-2.7 6.5-6.4 6.5A5.9 5.9 0 0 1 4 16c0-3.7 3.2-6.3 7.1-5.7v3.3c-1.8-.4-3.4.6-3.4 2.4 0 1.4 1.1 2.4 2.4 2.4 1.7 0 2.6-1.2 2.6-3.1V3h4z" fill="currentColor"></path></svg></a><a aria-label="Instagram" class="instagram" href="https://www.instagram.com/stephenson_king" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect fill="none" height="18" rx="5" stroke="currentColor" stroke-width="2" width="18" x="3" y="3"></rect><circle cx="12" cy="12" fill="none" r="4.2" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.7" fill="currentColor" r="1.2"></circle></svg></a><a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/2349033065503" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.7 6L0 24l6.2-1.6a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.5zM12 21.9h-.1a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.9 9.9 0 0 1-1.5-5.3C2.1 6.5 6.5 2.1 12 2.1c2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.3 2.9 7 0 5.5-4.5 9.9-9.9 9.9zm5.4-7.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.2 3.2.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.7.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4z" fill="currentColor"></path></svg></a></div>
+</nav></div>
 </header>
-
-
-<!-- ================= HERO ================= -->
-
 <section class="hero" id="home">
-
-    <img
-        src="images/hero.jpg"
-        class="hero-image"
-        alt="KING LEEADE playing guitar"
-    >
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            LEAD GUITARIST • WORSHIP LEADER • MUSIC MINISTER
-        </div>
-
-        <h1>
-            <span class="white">KING</span>
-            <span class="gold">LEEADE</span>
-        </h1>
-
-        <div class="gold-line"></div>
-
-        <p class="hero-text">
-            Using skill, sound and spirit to create atmospheres
-            that glorify God and touch lives through every note.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#music" class="btn gold-btn">
-                ▶ &nbsp; WATCH SHOWREEL
-            </a>
-
-            <a href="#music" class="btn outline-btn">
-                🎧 &nbsp; LISTEN NOW
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="hero-sign">
-        To God
-        <small>BE THE GLORY</small>
-    </div>
-
+<div class="hero-person"></div><div class="hero-content"><div class="wrap"><div class="hero-copy"><div class="eyebrow">THE FACE • THE SOUND • THE MINISTRY</div>
+<h1>KING <span>LEEADE</span></h1>
+<h2>Strings that worship. Sound that ministers.</h2>
+<p>King Leeade is a professional gospel guitarist, minstrel and music producer, specializing in lead and rhythm guitar. His sound blends expressive musicianship, worship and professional live performance.</p>
+<div class="buttons"><a class="btn primary" href="#services">VIEW SERVICES</a><a class="btn ghost" href="#contact">BOOK KING LEEADE →</a></div><div class="quick-contact"><a class="gmail" href="mailto:kingleead@gmail.com">✉ Gmail</a><a href="https://wa.me/2349033065503" target="_blank" rel="noopener">💬 Chat</a><a href="tel:+2348151670393">☎ Call</a></div></div></div>
 </section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
+<section class="section" id="about"><div class="wrap">
+<div class="head"><div><div class="kicker">ABOUT KING LEEADE</div><h2>The guitarist<br/>behind the sound.</h2></div><p>You are the face of the brand. The guitar is part of the visual atmosphere — never the replacement for you.</p></div>
 <div class="about">
+<div class="box portrait"><img alt="KING LEEADE" src="assets/img6.jpg"/></div>
+<div class="box copy"><h3>ABOUT <span style="color:var(--gold)">KING LEEADE</span></h3>
+<p>I am KING LEEADE, a professional guitarist with a deep passion for gospel music and ministry. I serve as a lead and rhythm guitarist, committed to excellence, spirit-filled expression, and creating an atmosphere where heaven meets earth. Through my music, I seek to use every note as a vessel for worship, encouragement, and ministry, bringing expressive tone, musical sensitivity, and excellence to every assignment.</p>
+<p>From the stage to the studio, he serves with a heart for God and a commitment to quality sound. His musical workflow includes guitars, effects processors, FL Studio, Behringer UMC22 and his Epiphone Les Paul.</p>
+<p class="quote">“Music is my ministry, and my guitar is my voice.”</p></div>
 
-    <div class="about-photo">
-
-        <img
-            src="images/gallery-1.jpg"
-            alt="KING LEEADE performing"
-        >
-
-    </div>
-
-
-    <div>
-
-        <div class="kicker">
-            ABOUT ME
-        </div>
-
-        <h2>
-            CALLED.
-            ANOINTED.
-            <span>COMMITTED.</span>
-        </h2>
-
-        <p>
-            I am KING LEEADE, a professional guitarist with a deep
-            passion for gospel music and ministry. I serve as a lead
-            and rhythm guitarist, committed to excellence, spirit-filled
-            expressions and creating an atmosphere where heaven meets earth.
-        </p>
-
-
-        <div class="about-icons">
-
-            <div>
-                <b>♬</b>
-                LEAD & RHYTHM<br>
-                GUITARIST
-            </div>
-
-            <div>
-                <b>♱</b>
-                WORSHIP<br>
-                MINISTER
-            </div>
-
-            <div>
-                <b>◈</b>
-                STUDIO & LIVE<br>
-                PERFORMER
-            </div>
-
-            <div>
-                <b>♥</b>
-                PASSION FOR<br>
-                GOD'S PRESENCE
-            </div>
-
-        </div>
-
-    </div>
-
+</div></div></section>
+<section class="section" id="gallery"><div class="wrap">
+<div class="head"><div><div class="kicker">GALLERY</div><h2>My <span style="color:var(--gold)">Sessions</span></h2></div><p>Real moments from live performance, recording, studio worship and ministry.</p></div>
+<div class="gallery"><div class="g"><img alt="KING LEEADE live recording" src="assets/img1.jpg"/><div class="label">LIVE RECORDING</div></div><div class="g"><img alt="KING LEEADE studio session" src="assets/img4.jpg"/><div class="label">STUDIO SESSION WORSHIP</div></div><div class="g"><img alt="KING LEEADE worship" src="assets/img9.jpg"/><div class="label">WORSHIP</div></div><div class="g"><img alt="KING LEEADE live performance" src="assets/img1.jpg"/><div class="label">LIVE PERFORMANCE</div></div><div class="g"><img alt="KING LEEADE stage" src="assets/img6.jpg"/><div class="label">STAGE</div></div><div class="g"><img alt="KING LEEADE gospel ministry" src="assets/img12.jpg"/><div class="label">GOSPEL MINISTRY</div></div></div></div></section>
+<section class="section" id="services"><div class="wrap">
+<div class="head"><div><div class="kicker">SERVICES &amp; PRICING</div><h2>Book the<br/>right session.</h2></div><p>Your exact services and prices are shown below.</p></div>
+<div class="service-grid">
+<div class="service-card"><span>🎸</span><div><strong>Lead Guitar</strong><p>Expressive lead lines, melodic fills and worship-focused guitar parts.</p></div></div>
+<div class="service-card"><span>🎼</span><div><strong>Rhythm Guitar</strong><p>Solid, tasteful rhythm parts that support the song and build the foundation.</p></div></div>
+<div class="service-card"><span>🎙️</span><div><strong>Studio Recording</strong><p>Professional guitar recording for gospel productions, demos and finished tracks.</p></div></div>
+<div class="service-card"><span>🙏</span><div><strong>Live Ministration</strong><p>Spirit-led guitar ministry for worship services, concerts and special programs.</p></div></div>
 </div>
-
-</section>
-
-
-<!-- ================= GALLERY ================= -->
-
-<section id="gallery">
-
-    <div class="section-title">
-        <span></span>
-        <h2>LIVE <em>IN WORSHIP</em></h2>
-        <span></span>
-    </div>
-
-
-    <div class="gallery-grid">
-
-        <img src="images/gallery-1.jpg" alt="KING LEEADE guitar performance">
-
-        <img src="images/gallery-2.jpg" alt="KING LEEADE playing guitar">
-
-        <img src="images/gallery-3.jpg" alt="KING LEEADE live performance">
-
-        <img src="images/gallery-4.jpg" alt="KING LEEADE performing">
-
-        <img src="images/gallery-5.jpg" alt="KING LEEADE worship performance">
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services">
-
-    <div class="section-title">
-        <span></span>
-        <h2>WHAT <em>I DO</em></h2>
-        <span></span>
-    </div>
-
-
-    <div class="services-grid">
-
-        <div class="service">
-            <div class="service-icon">♬</div>
-            <h3>LIVE PERFORMANCE</h3>
-            <p>
-                Church events, concerts,
-                conferences & more.
-            </p>
-        </div>
-
-
-        <div class="service">
-            <div class="service-icon">◉</div>
-            <h3>STUDIO RECORDING</h3>
-            <p>
-                Professional guitar tracking
-                for your projects.
-            </p>
-        </div>
-
-
-        <div class="service">
-            <div class="service-icon">♫</div>
-            <h3>MUSIC PRODUCTION</h3>
-            <p>
-                Gospel arrangements,
-                composition & more.
-            </p>
-        </div>
-
-
-        <div class="service">
-            <div class="service-icon">⚙</div>
-            <h3>GEAR & TONE</h3>
-            <p>
-                Using the best gear
-                for the perfect sound.
-            </p>
-        </div>
-
-
-        <div class="service">
-            <div class="service-icon">♧</div>
-            <h3>TRAINING & MENTORSHIP</h3>
-            <p>
-                Equipping upcoming
-                guitarists for excellence.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= STATS ================= -->
-
-<div class="stats" id="gear">
-
-    <div class="signature">
-        King-Leeade
-        <small>TO GOD BE THE GLORY</small>
-    </div>
-
-
-    <div class="stat">
-        <strong>10+</strong>
-        <span>YEARS OF<br>EXPERIENCE</span>
-    </div>
-
-
-    <div class="stat">
-        <strong>100+</strong>
-        <span>EVENTS &<br>MINISTRIES</span>
-    </div>
-
-
-    <div class="stat">
-        <strong>1000+</strong>
-        <span>SONGS<br>PLAYED</span>
-    </div>
-
-
-    <div class="stat">
-        <strong>1</strong>
-        <span>MISSION:<br>TO GLORIFY GOD</span>
-    </div>
-
-
-    <div class="gear">
-
-        <small>EQUIPPED WITH</small>
-
-        Epiphone • NUX • FL Studio<br>
-        Behringer • PreSonus • M-Audio
-
-    </div>
-
-</div>
-
-
-<!-- ================= MUSIC ================= -->
-
-<section id="music">
-
-    <div class="section-title">
-        <span></span>
-        <h2>MUSIC & <em>SHOWREEL</em></h2>
-        <span></span>
-    </div>
-
-
-    <div class="music-box">
-
-        <div class="play">
-            ▶
-        </div>
-
-        <div>
-
-            <h3>
-                Strings that worship.
-                Sound that ministers.
-            </h3>
-
-            <p>
-                Performance videos and music from KING LEEADE.
-            </p>
-
-        </div>
-
-        <a href="#" class="btn gold-btn">
-            LISTEN NOW
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-    <div class="kicker">
-        LET'S WORK TOGETHER
-    </div>
-
-    <h2>
-        BOOK <span>KING LEEADE</span>
-    </h2>
-
-    <p class="contact-text">
-        For church services, concerts, studio sessions,
-        music production and ministry engagements.
-    </p>
-
-    <a
-        href="mailto:YOUR-EMAIL-HERE@gmail.com"
-        class="btn gold-btn"
-    >
-        CONTACT ME →
-    </a>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <img src="images/logo.png" alt="KING LEEADE">
-
-    <p>
-        © <span id="year"></span>
-        KING LEEADE.
-        Strings that worship. Sound that ministers.
-    </p>
-
-</footer>
-
-
+<div class="pricing" id="pricing">
+<div class="price"><b>STUDIO RECORDING</b><strong>$115</strong><span>Professional studio guitar recording</span></div>
+<div class="price"><b>LIVE RECORDING</b><strong>$148</strong><span>Live session recording support</span></div>
+<div class="price"><b>LIVE PERFORMANCE</b><strong>$115</strong><span>Lead or rhythm guitar performance</span></div>
+<div class="price"><b>REHEARSAL</b><strong>$85</strong><span>Focused rehearsal and preparation</span></div>
+</div></div></section>
+<section class="section" id="gear"><div class="wrap">
+<div class="head"><div><div class="kicker">MY GEAR</div><h2>The tools<br/>behind the tone.</h2></div><p>Guitar, effects and production tools used in the workflow.</p></div>
+<div class="gear"><div class="gear-card"><b>🎸</b><strong>Les Paul / Epiphone</strong></div><div class="gear-card"><b>🎛</b><strong>Knox Effects</strong></div><div class="gear-card"><b>🎚</b><strong>Behringer UMC22</strong></div><div class="gear-card"><b>💻</b><strong>FL Studio</strong></div></div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid">
+<div><div class="kicker">CONTACT KING LEEADE</div><h2>Let’s make heavenly sound together.</h2><p>Bookings, collaborations, studio sessions, live performances and rehearsals.</p><a class="btn primary" href="tel:+2348151670393">CALL TO BOOK →</a></div>
+<div class="contacts"><a class="contact-card" href="mailto:kingleead@gmail.com"><span class="contact-icon gmail">✉</span><span class="contact-copy"><small>Gmail</small><strong>kingleead@gmail.com</strong></span></a>
+<a class="contact-card" href="https://wa.me/2349033065503" target="_blank" rel="noopener"><span class="contact-icon whatsapp">💬</span><span class="contact-copy"><small>Chat</small><strong>WhatsApp Chat</strong></span></a>
+<a class="contact-card" href="tel:+2348151670393"><span class="contact-icon phone">☎</span><span class="contact-copy"><small>Call</small><strong>+234 815 167 0393</strong></span></a>
+
+<a class="contact-card" href="https://www.tiktok.com/@kingleead" target="_blank"><span class="contact-icon tiktok"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.7 3c.4 2.2 1.6 3.7 3.8 4v3.1c-1.5.1-2.8-.4-4-1.2v6.5c0 4-2.7 6.5-6.4 6.5A5.9 5.9 0 0 1 4 16c0-3.7 3.2-6.3 7.1-5.7v3.3c-1.8-.4-3.4.6-3.4 2.4 0 1.4 1.1 2.4 2.4 2.4 1.7 0 2.6-1.2 2.6-3.1V3h4z" fill="currentColor"></path></svg></span><span class="contact-copy"><small>TikTok</small><strong>@kingleead</strong></span></a>
+<a class="contact-card" href="https://www.instagram.com/stephenson_king" target="_blank"><span class="contact-icon instagram"><svg aria-hidden="true" viewbox="0 0 24 24"><rect fill="none" height="18" rx="5" stroke="currentColor" stroke-width="2" width="18" x="3" y="3"></rect><circle cx="12" cy="12" fill="none" r="4.2" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.7" fill="currentColor" r="1.2"></circle></svg></span><span class="contact-copy"><small>Instagram</small><strong>@stephenson_king</strong></span></a>
+<a class="contact-card" href="https://wa.me/2349033065503" target="_blank"><span class="contact-icon whatsapp"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.7 6L0 24l6.2-1.6a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.5zM12 21.9h-.1a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.9 9.9 0 0 1-1.5-5.3C2.1 6.5 6.5 2.1 12 2.1c2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.3 2.9 7 0 5.5-4.5 9.9-9.9 9.9zm5.4-7.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.2 3.2.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.7.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4z" fill="currentColor"></path></svg></span><span class="contact-copy"><small>WhatsApp</small><strong>+234 903 306 5503</strong></span></a>
+<a class="contact-card" href="tel:+2348151670393"><span class="contact-icon phone"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.6 2h2.1c.5 0 .9.3 1 .8l1 4.1c.1.4 0 .8-.3 1l-1.4 1.4c1 2 2.7 3.7 4.7 4.7l1.4-1.4c.3-.3.7-.4 1-.3l4.1 1c.5.1.8.5.8 1v2.1c0 .6-.4 1-1 1C11.8 21.4 2.6 12.2 2.6 3c0-.6.4-1 1-1h3z" fill="currentColor"></path></svg></span><span class="contact-copy"><small>Contact</small><strong>+234 815 167 0393</strong></span></a>
+</div></div></section>
+<footer><div class="wrap"><div class="footer-brand">WORSHIP • MUSIC • MINISTRY</div><div>© 2026 KING LEEADE. All Rights Reserved.</div></div></footer>
 <script>
-
-const menu = document.getElementById("menu");
-const nav = document.getElementById("nav");
-
-menu.addEventListener("click", function(){
-
-    nav.classList.toggle("show");
-
-});
-
-document.querySelectorAll("nav a").forEach(function(link){
-
-    link.addEventListener("click", function(){
-        nav.classList.remove("show");
-    });
-
-});
-
-document.getElementById("year").textContent =
-new Date().getFullYear();
-
+const menu=document.getElementById("menu"),nav=document.getElementById("nav");
+menu.addEventListener("click",()=>nav.classList.toggle("open"));
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
 </script>
-
 </body>
-        </html>
+</html>
